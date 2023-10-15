@@ -21,15 +21,11 @@ const storage = multer.memoryStorage(); // Almacenamiento en memoria (puedes cam
 
 const server = express();
 
-const corsOptions = {
- // esta deberia ser pero no se si vercel me conectara ya que no es mi github con el q se conecto jej //'https://pf-prueba-pfran9yal-ditrex24s-projects.vercel.app',//"*", en caso de no tener ruta especifica, aca va la ruta que yo hice de mi deploy en vercel
-	
-	origin:"https://pfprueba-dl-bkr9.vercel.app/",
-	
-	methods: 'GET, POST, OPTIONS, PUT, DELETE',
-	allowedHeaders: 'Origin, X-Requested-With, Content-Type, Accept', // Solo permite estos encabezados
-	credentials: true, // Permite enviar cookies
-};
+server.use(function(req, res, next) {
+    res.header("Access-Control-Allow-Origin", "https://pfprueba-dl-bkr9-50t31vp7t-lorenas-projects-f39fd2e6.vercel.app/");
+    res.header("Access-Control-Allow-Headers", "Origin, X-Requested-With, Content-Type, Accept");
+    next();
+});
 
 server.use(cors(corsOptions));
 server.use(bodyParser.json({ limit: '50mb' }));
