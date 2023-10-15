@@ -21,7 +21,7 @@ const storage = multer.memoryStorage(); // Almacenamiento en memoria (puedes cam
 
 const server = express();
 const corsOptions = {
-    origin: 'https://pfprueba-dl-bkr9-50t31vp7t-lorenas-projects-f39fd2e6.vercel',
+    origin: 'https://pfprueba-dl-bkr9.vercel.app/',
     methods: 'GET,HEAD,PUT,PATCH,POST,DELETE',
  preflightContinue: false,
     optionsSuccessStatus: 204
