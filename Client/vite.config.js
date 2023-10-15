@@ -8,9 +8,10 @@ export default defineConfig({
     include: ['@fortawesome/fontawesome-svg-core']
   },
   env: {
-    REACT_APP_BACKEND_URL: "https://pfpruebadl-production.up.railway.app/"
+    REACT_APP_BACKEND_URL: "https://pfpruebadl-production.up.railway.app"
   }
 });
+
 
 
 
