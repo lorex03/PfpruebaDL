@@ -28,7 +28,7 @@ const corsOptions = {
 };
 
 server.use(function(req, res, next) {
-    res.header("Access-Control-Allow-Origin", "https://pfprueba-dl-bkr9-50t31vp7t-lorenas-projects-f39fd2e6.vercel.app/");
+    res.header("Access-Control-Allow-Origin", "https://pfprueba-dl-bkr9.vercel.app/");
     res.header("Access-Control-Allow-Headers", "Origin, X-Requested-With, Content-Type, Accept");
     next();
 });
