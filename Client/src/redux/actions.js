@@ -15,7 +15,7 @@ import {
 export const getProperty = () => {
   return async (dispatch) => {
     try {
-      const { data } = await axios.get("https://pfpruebadl-production.up.railway.app/properties");
+      const { data } = await axios.get("/properties");
 
       return dispatch({
         type: GET_PROPERTY,
@@ -32,7 +32,7 @@ export const getProperty = () => {
 
 export const getPropertyDetail = (id) => async (dispatch) => {
   try {
-    const { data } = await axios.get(`https://pfpruebadl-production.up.railway.app/properties/${id}`);
+    const { data } = await axios.get(`/properties/${id}`);
     return dispatch({ type: GET_PROPERTY_DETAIL, payload: data });
   } catch (error) {
     return dispatch({ type: ERROR, payload: error.message });
@@ -51,7 +51,7 @@ export const createProperty = (values) => {
   return async (dispatch) => {
     try {
       const { data } = await axios.post(
-        "https://pfpruebadl-production.up.railway.app/properties",
+        "/properties",
         values
       );
       toast.success("The property was created successfully");
@@ -68,7 +68,7 @@ export const createProperty = (values) => {
 export const editProperty = (propertyEdited) => {
   return async (dispatch) => {
     try {
-      const { data } = await axios.put("https://pfpruebadl-production.up.railway.app/properties", propertyEdited);
+      const { data } = await axios.put("/properties", propertyEdited);
       return dispatch({
         type:PROPERTY_EDITED,
         payload:data
@@ -83,7 +83,7 @@ export const editProperty = (propertyEdited) => {
 };
 
 export const userLogin = (valores) => {
-  const url = "https://pfpruebadl-production.up.railway.app/auth/login";
+  const url = "/auth/login";
   return async (dispatch) => {
     try {
       const { data } = await axios.post(url, valores);
