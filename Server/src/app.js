@@ -20,6 +20,12 @@ const multer = require('multer');
 const storage = multer.memoryStorage(); // Almacenamiento en memoria (puedes cambiarlo para guardar en disco si lo prefieres)
 
 const server = express();
+const corsOptions = {
+    origin: 'https://pfprueba-dl-bkr9-50t31vp7t-lorenas-projects-f39fd2e6.vercel',
+    methods: 'GET,HEAD,PUT,PATCH,POST,DELETE',
+ preflightContinue: false,
+    optionsSuccessStatus: 204
+};
 
 server.use(function(req, res, next) {
     res.header("Access-Control-Allow-Origin", "https://pfprueba-dl-bkr9-50t31vp7t-lorenas-projects-f39fd2e6.vercel.app/");
