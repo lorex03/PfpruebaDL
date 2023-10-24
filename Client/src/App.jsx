@@ -23,7 +23,7 @@ import axios from 'axios'
 
 axios.defaults.baseURL = 'https://pfpruebadl-production.up.railway.app';
 
-
+//agregando para verificar si se hace automaticamente"
 function App() {
 	const location = useLocation();
 	const dispatch = useDispatch();
