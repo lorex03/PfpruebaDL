@@ -15,10 +15,11 @@ import HomeAdmin from './views/Home/HomeAdmin';
 import Error404 from './components/Error/Error404';
 import LoginAdmin from './components/Login/LoginAdmin';
 import { EditPropertyFromAdmin } from './components/admin/editProperty/editProperty';
-import BookingSystem from './views/Reservations/Reservations';
+import Reservations from "./views/Reservations/Reservations";
 import Postuser from './components/propertiesAdmin/propertyUser';
 import PaymentForm from './components/PaymentForm/PaymentForm';
 import GestionUser from './views/gestionUser/GestionUser'
+import Bookings from "./views/MyBookings/MyBookings";
 import axios from 'axios'
 
 axios.defaults.baseURL = 'https://pfpruebadl-production.up.railway.app';
@@ -48,10 +49,12 @@ function App() {
 				<Route path='/error404' element={<Error404 />} />
 				<Route path='/loginadmin' element={<LoginAdmin />} />
 				<Route path='/admin/property/:id' element={<EditPropertyFromAdmin />} />
-				<Route path="/detail/:id/reservations" element={<BookingSystem />} />
+				<Route path="/detail/reservations/:id" element={<Reservations />} />
 				<Route path='/postUser' element={<Postuser />} />
 				<Route path='/checkout' element={<PaymentForm />} />
+
 				<Route path='/gestionUser' element={<GestionUser />} />
+				<Route path="/bookings" element={<Bookings />} />
 			</Routes>
 		</div>
 	);
