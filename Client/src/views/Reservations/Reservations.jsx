@@ -8,6 +8,7 @@ import { FadeLoader } from "react-spinners";
 import PaymentForm from "../../components/PaymentForm/PaymentForm";
 import { faHouse } from "@fortawesome/free-solid-svg-icons";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
+// actualizar VERCEEEEEEEEEEEEEEEEEEEEEL
 import { UserOutlined } from "@ant-design/icons";
 import { Avatar } from "antd";
 
